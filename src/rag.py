@@ -8,6 +8,7 @@ from langchain_core.runnables.history import RunnableWithMessageHistory
 from langchain_groq import ChatGroq
 from langchain_community.vectorstores import FAISS
 from langchain_openai import OpenAIEmbeddings
+import streamlit as st 
 
 import os
 from dotenv import load_dotenv
@@ -69,7 +70,10 @@ rag_chain = create_retrieval_chain(history_aware_retriever, question_answer_chai
 
 
 ### Statefully manage chat history ###
-config = {"configurable": {"session_id": "abc2"}}
+if "session_id" not in st.session_state:
+    st.session_state["session_id"] = "meu-id"
+
+config = {"configurable": {"session_id": st.session_state["session_id"]}}
 store = {}
 
 

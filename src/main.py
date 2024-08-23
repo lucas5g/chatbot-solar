@@ -2,6 +2,7 @@ import streamlit as st
 from rag import conversational_rag_chain, config, history
 from langchain.schema import HumanMessage
 
+
 st.set_page_config(page_title='Chat Solar')
 st.markdown(
     """
@@ -9,7 +10,6 @@ st.markdown(
     Tire todas as dúvidas sobre a nova plataforma.
     """
 )
-
 
 for message in history.messages:
 
