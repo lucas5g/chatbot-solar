@@ -88,4 +88,4 @@ conversational_rag_chain = RunnableWithMessageHistory(
 )
 
 history = get_session_history("abc2")
-history.add_ai_message("Aqui é o ChatSolar! Como posso ajudar?","")
+history.add_ai_message("Aqui é o ChatSolar! Como posso ajudar?")
