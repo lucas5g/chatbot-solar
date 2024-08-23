@@ -1,6 +1,7 @@
 langchain_community
-langchain_chroma
+#langchain_chroma
 pypdf
 langchain_openai
 langchain-groq
-streamlit
+streamlit 
+faiss-cpu
