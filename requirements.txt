@@ -4,4 +4,5 @@ pypdf
 langchain_openai
 langchain-groq
 streamlit 
-faiss-cpu
+faiss-cpu 
+python-dotenv
